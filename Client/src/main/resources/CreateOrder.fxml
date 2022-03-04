@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="362.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui2.controllers.CreateOrderController">
+   <children>
+      <TextField fx:id="amount" layoutX="157.0" layoutY="179.0" />
+      <ChoiceBox fx:id="delivered" layoutX="157.0" layoutY="238.0" prefWidth="150.0" />
+      <TextArea fx:id="description" layoutX="157.0" layoutY="72.0" prefHeight="86.0" prefWidth="149.0" />
+      <Button layoutX="93.0" layoutY="302.0" mnemonicParsing="false" onAction="#createOrder" prefHeight="25.0" prefWidth="63.0" text="Create" />
+      <Button layoutX="209.0" layoutY="302.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="63.0" text="Cancel" />
+      <Label layoutX="62.0" layoutY="72.0" text="Description:" />
+      <Label layoutX="62.0" layoutY="183.0" text="Amount:" />
+      <Label layoutX="59.0" layoutY="242.0" text="Delivered:" />
+      <Label layoutX="112.0" layoutY="21.0" text="CREATE NEW ORDER">
+         <font>
+            <Font name="Gadugi" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
