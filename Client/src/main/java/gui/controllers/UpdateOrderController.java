@@ -1,8 +1,8 @@
-package gui2.controllers;
+package gui.controllers;
 
 import client.Client;
 import client.Order;
-import gui2.core.ViewHandler;
+import gui.core.ViewHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;

@@ -1,6 +1,6 @@
-package gui2;
+package gui;
 
-import gui2.core.ViewHandler;
+import gui.core.ViewHandler;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

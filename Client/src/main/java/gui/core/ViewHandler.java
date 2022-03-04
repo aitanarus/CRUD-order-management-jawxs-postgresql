@@ -1,9 +1,9 @@
-package gui2.core;
+package gui.core;
 
 import com.pixelduke.control.skin.FXSkins;
-import gui2.controllers.CreateOrderController;
-import gui2.controllers.OrderListController;
-import gui2.controllers.UpdateOrderController;
+import gui.controllers.CreateOrderController;
+import gui.controllers.OrderListController;
+import gui.controllers.UpdateOrderController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
