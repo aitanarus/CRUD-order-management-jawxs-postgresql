@@ -27,8 +27,16 @@ public class OrderCRUDServiceImpl implements OrderCRUDService {
     }
 
     @Override
-    public ArrayList<Order> readByCharacters(String characters) {
-        return orderDAO.readByCharacters(characters);
+    public ArrayList<Order> readByCharacters(String characters, ArrayList<Order> orders) {
+        System.out.println(orders.size());
+        ArrayList <Order> searchResult = new ArrayList<>();
+        for(Order order : orders) {
+            if (order.toString().contains(characters)){
+                System.out.println(order.toString().contains(characters));
+                searchResult.add(order);
+            }
+        }
+        return searchResult;
     }
 
     @Override
@@ -45,4 +53,6 @@ public class OrderCRUDServiceImpl implements OrderCRUDService {
     public ArrayList<Order> loadOrders() {
         return orderDAO.loadOrders();
     }
+
+
 }

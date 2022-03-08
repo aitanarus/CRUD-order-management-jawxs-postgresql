@@ -14,9 +14,9 @@
       <Label layoutX="62.0" layoutY="72.0" text="Description:" />
       <Label layoutX="62.0" layoutY="183.0" text="Amount:" />
       <Label layoutX="59.0" layoutY="242.0" text="Delivered:" />
-      <Label layoutX="112.0" layoutY="21.0" text="CREATE NEW ORDER">
+      <Label layoutX="117.0" layoutY="21.0" text="CREATE NEW ORDER">
          <font>
-            <Font name="Gadugi" size="18.0" />
+            <Font name="Gadugi" size="15.0" />
          </font>
       </Label>
    </children>

@@ -43,30 +43,6 @@ public class OrderDAOImpl implements OrderDAO {
     }
 
     @Override
-    public ArrayList<Order> readByCharacters(String characters) {
-        System.out.println("DAO: " + characters);
-        try(Connection connection = getConnection()) {
-            PreparedStatement statement = connection.prepareStatement("SELECT * FROM orders WHERE description = ? LIKE ?");
-            statement.setString(1, characters);
-            ResultSet resultSet = statement.executeQuery();
-            ArrayList<Order> result = new ArrayList<>();
-            while(resultSet.next()) {
-                int id = resultSet.getInt("orderid");
-                String description = resultSet.getString("description");
-                int amount = resultSet.getInt("amount");
-                boolean delivered = resultSet.getBoolean("delivered");
-                Order order = new Order(id, description, amount, delivered);
-                result.add(order);
-            }
-            System.out.println(result.size());
-            return result;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
-
-    @Override
     public boolean update(Order order) {
         try(Connection connection = getConnection()) {
             PreparedStatement statement = connection.prepareStatement("UPDATE public.orders SET description = ?, amount = ?, delivered = ? WHERE orderid = ?");

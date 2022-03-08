@@ -5,12 +5,14 @@ import client.Order;
 import gui.core.ViewHandler;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import jfxtras.styles.jmetro.JMetroStyleClass;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 public class OrderListController {
@@ -31,6 +33,7 @@ public class OrderListController {
 
 
     public static ObservableList<Order> orders;
+    public static ObservableList<Order> searchResult;
     public static  Order selectedOrder;
     public static int selectedIndex;
 
@@ -76,7 +79,13 @@ public class OrderListController {
     }
 
     public void search() {
-        System.out.println("Controller: " + searchLabel.getText());
-        client.getPort().readByCharacters(searchLabel.getText());
+        ArrayList<Order> arrayListOrders = new ArrayList<Order>(orders);
+        searchResult = FXCollections.observableArrayList((client.getPort().readByCharacters(searchLabel.getText(), arrayListOrders)));
+        tableView.setItems(searchResult);
+    }
+
+    public void clear() {
+        tableView.setItems(orders);
+        searchLabel.clear();
     }
 }

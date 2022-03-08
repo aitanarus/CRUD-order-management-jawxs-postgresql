@@ -6,9 +6,9 @@
 
 <AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.OrderListController">
    <children>
-      <Label layoutX="36.0" layoutY="39.0" text="ORDERS" textAlignment="CENTER" underline="true">
+      <Label layoutX="36.0" layoutY="73.0" text="ORDERS" textAlignment="CENTER">
          <font>
-            <Font name="Gadugi" size="20.0" />
+            <Font name="Gadugi" size="15.0" />
          </font>
       </Label>
       <Button layoutX="507.0" layoutY="187.0" mnemonicParsing="false" onAction="#createOrder" prefHeight="25.0" prefWidth="55.0" text="Create" />
@@ -24,5 +24,6 @@
             <TableColumn fx:id="deliveredColumn" minWidth="3.3333740234375" prefWidth="110.66668701171875" text="delivered" />
         </columns>
       </TableView>
+      <Button layoutX="310.0" layoutY="107.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="51.0" text="Clear" />
    </children>
 </AnchorPane>
